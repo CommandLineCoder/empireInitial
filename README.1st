@@ -1,4 +1,13 @@
-Empire Initial README.1st version 0.7, released 31Dec2023
+Empire Initial README.1st version 0.7.1, released 31Dec2023
+
+Command to download source from this repostory on a Raspberry Pi:
+git clone https://github.com/CommandLineCoder/EmpireInitial.git
+
+Command to compile the source after changing directory to "EmpireInitial"
+debuild -us -uc -b 
+
+An executable file "empire" should now be in the EmpireInitial directory
+
 
 Hi, I'm Alex / aka CommandLineCoder, 
 
