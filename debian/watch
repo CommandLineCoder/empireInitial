@@ -1,0 +1,2 @@
+version=3
+http://www.catb.org/~esr/vms-empire/vms-empire-(\d.*)\.(?:tgz|tbz2|txz|tar\.(?:gz|bz2|xz))

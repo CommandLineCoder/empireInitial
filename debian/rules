@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+CPPFLAGS := $(shell dpkg-buildflags --get CPPFLAGS)
+CFLAGS   := $(shell dpkg-buildflags --get CFLAGS) $(CPPFLAGS) -Wno-format-security
+LDFLAGS  := $(shell dpkg-buildflags --get LDFLAGS)
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	dh_auto_build -- CFLAGS="$(CFLAGS)" PROFILE="$(LDFLAGS)"
+
+override_dh_auto_install:
+	# Do not use upstream's install target but Debian's install file instead.
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS
+
+override_dh_install:
+	mv vms-empire empire
+	dh_install
+
+override_dh_auto_clean:
+	$(RM) *.o empire
+

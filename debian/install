@@ -1,0 +1,4 @@
+debian/empire.desktop usr/share/applications
+empire                usr/games
+vms-empire.png        usr/share/icons/hicolor/48x48/apps
+vms-empire.xml        usr/share/metainfo

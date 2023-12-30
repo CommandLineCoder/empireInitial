@@ -1,0 +1,32 @@
+Source: empire
+Section: games
+Priority: optional
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders:
+ Markus Koschany <apo@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ libncurses5-dev
+Standards-Version: 4.6.2
+Homepage: http://www.catb.org/~esr/vms-empire/
+Vcs-Git: https://salsa.debian.org/games-team/empire.git
+Vcs-Browser: https://salsa.debian.org/games-team/empire
+
+Package: empire
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends}
+Description: war game of the century
+ Empire is a console game simulation of a full-scale war between two
+ emperors, the computer and you. Naturally, there is only room for
+ one, so the object of the game is to destroy the other.
+ .
+ The world on which the game takes place is a square rectangle containing
+ cities, land and water. Cities are used to build armies, planes, and
+ ships which can move across the world destroying enemy pieces, exploring,
+ and capturing more cities.
+ .
+ The classic game from the 1980s uses text mode graphical output, drawing
+ your units, cities and the world in color. Commands are issued using
+ the keyboard.

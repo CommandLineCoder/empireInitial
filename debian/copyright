@@ -1,0 +1,17 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: vms-empire
+Source: http://www.catb.org/~esr/vms-empire/
+
+Files: *
+Copyright: 1987,1988, Chuck Simmons <chuck@amdahl.com>
+           1994-2021, Eric S. Raymond <esr@thyrsus.com>
+License: GPL-2
+
+Files: debian/*
+Copyright: 2000-2006, Peter Palfrader <weasel@debian.org>
+           2014-2023, Markus Koschany <apo@debian.org>
+License: GPL-2
+
+License: GPL-2
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
