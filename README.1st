@@ -1,0 +1,156 @@
+Empire Initial README.1st version 0.7, released 31Dec2023
+
+Hi, I'm Alex / aka CommandLineCoder, 
+
+I wanted to make a course for people to be able to learn coding in a realistic, 
+but not overly complex application and aside from learning things like control
+structures (if,if/else, while, for etc), the could see and make changes
+as if it was their job. 
+
+Empire is a wargame simulation of the 4X genre. (Exlore, Expand, Exploit,
+ Exterminate). Two commanders have gone to war on a 100x60 square map
+which has islands, and cities. 
+
+You and the computer both start off with a city, and cities produce units. 
+
+Armies the only unit which can capture new cities. Fighters can move fast 
+but have limited fuel. Troop Transports can move armies from one island to
+the next. Patrol boats can move fast, but aren't very strong and Battleships
+are the heaviest armoured unit available. There are more, but you should
+be able to get the idea. 
+
+Empire has been around for a long time and is one of the first games I
+remember playing. 
+
+In this course you'll be someone working as a Software Engineer and working
+to improve the game for a "client" which is a fictitious military which is
+looking to "use the program as a training aid for their junior officers 
+to conduct wargames". The idea is that they can make planning mistakes
+in the game and learn from them before they graduate and command real soldiers.
+
+The "client" likes the game as it largely is, but has a few changes
+that have to be incorporated before it can go live and these aren't too
+difficult to do. 
+
+The source code in the repository is the complete game, from level generation,
+user interface and playing the AI. As a text based game, it doesnt rely on
+any libraries or complex calculations to generate graphics and the game
+mechanics should be easy to learn. 
+
+
+
+Suggested Tasks
+
+1) Read License - By downloading the code, you agree to be bound by requirements
+of the software licence it was released under (in this case, the GNU General
+Public Licence v2). In short you are free to download and use, however if
+you pass it on to others, you have to make the source available to them.
+
+2) Update docs to show fork - another of the conditions of the licence is
+ that people who make changes available to the public have to tell users
+ someone else has made changes, this would stop original developers
+ being blamed for issues people who forked their code generated.
+
+3) Quick review of all executable code - as part of the license conditions,
+ the code is released without any warranty. As you are developing this
+program on behalf of a client, it's prudent to review all of the code
+to make sure there isn't anything extra in there. The code has been
+open source for a long time and i'm not seriously suggesting anything extra
+is in there, but its a good reason to have a look at all the code
+in whatever detail you feel necessary to get familiar with it.
+
+4) Review existing documented bugs - The client has reported some issues
+but the previous developers may also be aware of some other issues that
+might warrant fixing as well.
+
+
+5) Set default delay to 250ms - When the program starts by default, it
+delays the program by 2 seconds (2000ms) every time there is a message.
+While that might have been appropriate for games over phone lines and when
+computers werent as fast, the delay can be shortened to 250ms.
+
+  aside from changing the code, check documentation to keep it consistent.
+
+
+6) Set trace/empmovie to be created by default - The program has the ability
+to record a "movie" of events of the game, but this has to be selected. 
+The client wants the movie to be recorded by default and allow instructors
+to review the students actions in the game.
+
+
+7) Soft remove Satellite (remove menu options, but not all code yet) -
+The game allows cities to produce satellites. The client feels this overly
+complicates things as the scenario will be two factions going to war
+with World War 2 like technology and satellites do not fit in this scenario.
+The first task is to remove references of satellites from the visible code 
+and the documentation. Then later a detailed task of removing it entirely
+can be conducted. Instructors will be briefed in case the students manage
+to start building a satellite.
+
+8) Hard remove Satellite (Remove all code) - This removes all trace
+of satellites from the code logic. 
+
+
+9) Dont bail out if not "Y" on computer acknowledge defeat - once the player
+has 3 times as many cities and 3 times as many armies as the computer,
+a screen will show saying the computer concedes. The user is asked whether
+they wish to keep playing and are prompted to enter "Y" or "N". 
+If the answer is anything other than "Y", the game treats the answer as "N".
+This behaviour is different to elsewhere in the game such as ordering an
+army into the water, where the user is prompted for a "Y" or "N" and
+it will keep doing so if other keys are pressed.  
+
+
+
+10) Allow numeric keypad controls - Controls are via 
+QWE
+A D
+ZXC for directions, allow directions to be given via the numeric keypad. 
+Probably use digits rather than having numlock turned off as handling arrows
+could be problematic or keymappings for 7,9,1 & 3 could be nonstandard.
+
+11) Add text to show when commanding units or cities. (display prompts for
+keystrokes like VAMN). When commands are given on giving orders to cities, 
+show acknowledgements or prompts in the top menu. 
+EG: V - give order to city, A - Select type of Unit, M- Move to a location, 
+N- destination to move to.
+
+12) Allow map generation from a user supplied seed from command line. 
+   The client would like to have multiple students play on the same map.
+If the game uses psuedorandom generation from keys, then this should be
+possible.
+
+13) Give end screen when computer entirely defeated after it acknowledges
+defeat -Once the enemy has zero material, show another end screen.
+
+14) Make references to "men" gender neutral - change references to men to
+soldiers (or similar) and "Sir" to "Commander". The client considers this
+to be an issue that must be fixed prior to release.
+
+15) print the turn number on lines printed to info_list
+
+16) change filename info_list to be emp_info_list..
+
+17 There is a discrepancy between scores printed on normal display and
+ that shown during movie mode
+
+18) Add context text saying options when building units(City builds a 
+new type of unit)
+
+19) Add end text when all cities are under control
+
+20) Print seed used to generate map on info_list
+
+21) Add referens to info doc.txt to documentation
+
+22) Add new function to display last N messages
+EG. if a fight happend & who won as several messages
+might happen while computer moves
+
+23) Change movie replay to be in colour
+
+24) Extend the print command to also print the full sized map in colour, possibly using HTML
+
+
+
+
