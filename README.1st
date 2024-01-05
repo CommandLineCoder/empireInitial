@@ -76,6 +76,8 @@ might warrant fixing as well.
 soldiers (or similar) and "Sir" to "Commander". The client considers this
 to be an issue that must be fixed prior to release.
 
+5.5) NOTE: Quick edit to add a reminder to remove references to "Grope"
+
 
 6) change filename info_list to be emp_info_list..
 
