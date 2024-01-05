@@ -4,7 +4,9 @@ Command to download source from this repostory on a Raspberry Pi:
 git clone https://github.com/CommandLineCoder/EmpireInitial.git
 
 Command to compile the source after changing directory to "EmpireInitial"
-debuild -us -uc -b 
+
+sudo apt install libncurses-dev
+make
 
 An executable file "empire" should now be in the EmpireInitial directory
 
